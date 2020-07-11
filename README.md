@@ -34,7 +34,7 @@ $ npm run build
 
 ## What's included
 ```
-CoreUI-React#v3.0.0
+Project Root
 ├── public/          #static files
 │   ├── index.html   #html template
 │   └── assets/      #assets favicon css
