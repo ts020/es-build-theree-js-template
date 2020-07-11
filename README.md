@@ -31,7 +31,7 @@ $ npm install
 ```
 
 
-## There.js development
+## development
 ```bash
 # run dev server
 $ npm run dev
@@ -40,6 +40,11 @@ $ npm run dev
 $ npm run dev:ts
 
 # reload browser
+```
+
+## Build
+```bash
+$ npm run build
 ```
 
 ## What's included
