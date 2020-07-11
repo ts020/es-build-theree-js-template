@@ -1,11 +1,15 @@
 {
   "license": "mit",
   "scripts": {
-    "dev": "run-s clean dev:copy dev:ts dev:start",
+    "dev": "run-s dev:clean dev:copy dev:ts dev:start",
     "dev:copy": "cpx \"./public/**/*.*\" ./dist",
     "dev:ts": "esbuild src/main.ts --bundle '--define:process.env.NODE_ENV=\"development\"' --outfile=dist/out.js",
     "dev:start": "http-server ./dist -p 4578 -c-1",
-    "clean": "rimraf ./dist"
+    "dev:clean": "rimraf ./dist",
+    "build": "run-s build:clean build:copy build:ts",
+    "build:copy": "cpx \"./public/**/*.*\" ./build",
+    "build:ts": "esbuild src/main.ts --bundle '--define:process.env.NODE_ENV=\"production\"' --minify --outfile=build/out.js",
+    "build:clean": "rimraf ./build"
   },
   "devDependencies": {
     "esbuild": "^0.6.0",
