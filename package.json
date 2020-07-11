@@ -1,4 +1,5 @@
 {
+  "license": "mit",
   "scripts": {
     "dev": "run-s clean dev:copy dev:ts dev:start",
     "dev:copy": "cpx \"./public/**/*.*\" ./dist",
